@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vientre Plano y Fuerte: El Plan Familiar para Madres 40+</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #10B981;
+            --secondary: #34D399;
+            --accent: #6EE7B7;
+            --background: #022C22;
+            --text-light: #F3F4F6;
+            --text-dim: #9CA3AF;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .image-placeholder {
+            border: 2px dashed var(--primary);
+            padding: 40px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .image-placeholder svg {
+            width: 50px;
+            height: 50px;
+            fill: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to bottom, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subheadline {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: var(--secondary);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        /* PROBLEMA */
+        .problema {
+            padding: 80px 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .problem-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 4px solid #ef4444;
+        }
+
+        /* SOLUCION */
+        .solucion {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .solucion-box {
+            background: linear-gradient(180deg, var(--card-bg) 0%, transparent 100%);
+            padding: 50px;
+            border-radius: 30px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        /* BENEFICIOS */
+        .beneficios {
+            padding: 80px 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .benefit-item svg {
+            color: var(--primary);
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* MODULOS */
+        .modulos {
+            padding: 80px 0;
+        }
+
+        .module-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            padding: 30px;
+            transition: background 0.3s;
+        }
+
+        .module-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* COMPARACION */
+        .comparacion {
+            padding: 80px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+
+        .faq-q {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        /* GARANTIA */
+        .garantia {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .garantia-seal {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 40px;
+            border-radius: 100%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 2px solid var(--primary);
+        }
+
+        /* OFERTA */
+        .oferta {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #ef4444;
+            font-size: 1.5rem;
+        }
+
+        /* URGENCIA */
+        .urgencia-bar {
+            background: #ef4444;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .price-tag { font-size: 3.5rem; }
+            .solucion-box { padding: 30px 15px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="urgencia-bar">⚠️ OFERTA LIMITADA: 70% DE DESCUENTO DISPONIBLE HOY</div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Adiós al vientre de la menopausia</h1>
+            <p class="subheadline">El sistema de alimentación sin contar calorías y pesas en casa diseñado para madres profesionales que quieren recuperar su energía sin sacrificar las cenas familiares.</p>
+            
+            <img src="hero-image.png" alt="hero-image" style="display:block;width:100%;max-width:100%;object-fit:cover;border-radius:12px;margin:0 auto;" />
+            
+            <a href="#" class="cta-button">¡SÍ! QUIERO MI MI PLAN POR $17!</a>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="problema">
+        <div class="container">
+            <h2 class="section-title">¿Te sientes atrapada en la paradoja del "Todo o Nada"?</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Metabolismo "Dormido"</h3>
+                    <p>Sientes que antes podías comer lo que fuera, pero ahora, pasados los 40, hasta el aire parece subirte de peso.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>La Doble Cocina</h3>
+                    <p>Estás cansada de cocinar pechuga de pollo aburrida para ti mientras tu familia disfruta de una cena deliciosa frente a ti.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Fatiga Crónica</h3>
+                    <p>Llegas a casa después de una jornada profesional agotadora y lo último que quieres es pasar horas en un gimnasio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUCION -->
+    <section class="solucion">
+        <div class="container">
+            <div class="solucion-box">
+                <h2 class="section-title">La Guía Maestra 'Metabolismo Fuerte'</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Hemos creado la solución realista. Sin batidos mágicos, sin horas de cardio y, sobre todo, <strong>totalmente compatible con tu vida familiar.</strong></p>
+                
+                <img src="product-mockup.png" alt="product-mockup" style="display:block;width:100%;max-width:100%;object-fit:cover;border-radius:12px;margin:0 auto;" />
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios">
+        <div class="container">
+            <h2 class="section-title">Por qué este plan es diferente</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="benefit-item">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span><strong>Nutrición Inteligente:</strong> Plan de 4 semanas con "intercambios familiares".</span>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span><strong>Fuerza desde Cero:</strong> Rutinas de 20 min en casa, explicadas con fotos paso a paso.</span>
+                </div>
+                <div class="benefit-item">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span><strong>Cero Complicaciones:</strong> Lista de compras simplificada para ir rápido al súper.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULOS -->
+    <section class="modulos">
+        <div class="container">
+            <h2 class="section-title">¿Qué incluye el manual?</h2>
+            <div class="module-card">
+                <h3>Módulo 1: El Despertar Metabólico</h3>
+                <p>Cómo ajustar tu nutrición tras los 40 sin morir de hambre ni contar macros.</p>
+            </div>
+            <div class="module-card">
+                <h3>Módulo 2: Entrenamiento de Fuerza en Casa</h3>
+                <p>La guía ilustrada para principiantes absolutas. Transforma flacidez en firmeza.</p>
+            </div>
+            <div class="module-card">
+                <h3>Módulo 3: Plan de Comidas de 4 Semanas</h3>
+                <p>Recetas que a tus hijos les encantarán y que a tu abdomen le sentarán genial.</p>
+            </div>
+            <div class="module-card">
+                <h3>Módulo 4: Mentalidad y Energía</h3>
+                <p>Técnicas rápidas para combatir la fatiga mental de la mujer profesional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARACION -->
+    <section class="comparacion">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegirnos?</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Dietas Tradicionales</th>
+                        <th>Vientre Plano 40+</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Calorías</td>
+                        <td>Pesaje constante</td>
+                        <td>Alimentación intuitiva</td>
+                    </tr>
+                    <tr>
+                        <td>Vida Social</td>
+                        <td>Restricción total</td>
+                        <td>Cenas familiares incluidas</td>
+                    </tr>
+                    <tr>
+                        <td>Ejercicio</td>
+                        <td>Horas de correr</td>
+                        <td>20 min de fuerza funcional</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <p class="faq-q">¿Necesito equipo de gimnasio?</p>
+                <p>No. Solo necesitas un par de mancuernas ligeras o algo de peso que tengas en casa.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">¿Tengo que cocinar platos diferentes para mí?</p>
+                <p>¡No! El plan está diseñado para que todos coman lo mismo con pequeños ajustes para ti.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">¿Es seguro si nunca he hecho ejercicio?</p>
+                <p>Totalmente. Empezamos desde el nivel cero absoluto con explicaciones claras.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GARANTIA -->
+    <section class="garantia">
+        <div class="container">
+            <div class="garantia-seal">
+                <strong>7 DÍAS<br>TOTAL GARANTÍA</strong>
+            </div>
+            <h2>Tu inversión está protegida</h2>
+            <p>Pruébalo durante una semana. Si no sientes que es el plan más práctico que has tenido, te devolvemos tu dinero sin preguntas.</p>
+        </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="oferta">
+        <div class="container">
+            <h2>Comienza tu transformación hoy</h2>
+            <p>Una consulta nutricional cuesta más de $50...</p>
+            <div class="old-price">Precio regular: $57.00</div>
+            <div class="price-tag">$17</div>
+            <p style="margin-bottom: 30px;">Recibe acceso inmediato a todo el sistema PDF.</p>
+            <a href="#" class="cta-button">¡COMPRAR AHORA POR $17!</a>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section style="padding: 100px 0; text-align: center; background: rgba(16, 185, 129, 0.05);">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">No dejes que tu metabolismo decida por ti</h2>
+            <p style="margin-bottom: 40px; font-size: 1.2rem; color: var(--text-dim);">Recupera tu ropa, tu energía y tu confianza frente al espejo.</p>
+            
+            <img src="final-proof.png" alt="final-proof" style="display:block;width:100%;max-width:100%;object-fit:cover;border-radius:12px;margin:0 auto;" />
+
+            <a href="#" class="cta-button" style="margin-top: 30px;">DESCARGAR TODO POR $17</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Vientre Plano y Fuerte. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px;">Este sitio no es parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
